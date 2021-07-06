@@ -6,10 +6,12 @@ const AppFunc = () => {
 
   useEffect(() => {
     console.log("AppFunc: Component Mounts");
+    setName();
   }, []);
 
   useEffect(() => {
     console.log("AppFunc: Component Updates");
+    setName();
   })
 
   const handleClick = () => {
