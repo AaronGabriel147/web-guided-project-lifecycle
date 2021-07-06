@@ -3,6 +3,10 @@ import axios from 'axios';
 
 class App extends React.Component {
   render() {
+    const dogImages = [
+
+    ];
+
     return (<div>
       <h1>Dog Search Form v1.0</h1>
       <form>
