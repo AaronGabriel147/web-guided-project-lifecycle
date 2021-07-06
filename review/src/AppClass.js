@@ -24,9 +24,6 @@ class AppClass extends React.Component {
 
     console.log('old state: ', prevState);
     console.log('new state: ', this.state);
-    this.setState({
-      name: Date.now()
-    });
   }
 
   handleNameButtonClick = (e) => {
