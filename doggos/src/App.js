@@ -30,7 +30,7 @@ class App extends React.Component {
     return (<div>
       <h1>Dog Search Form v1.0</h1>
       <form>
-        <input onChange={handleChange} />
+        <input onChange={this.handleChange} />
         <button>Fetch Dogs</button>
       </form>
       <div>
