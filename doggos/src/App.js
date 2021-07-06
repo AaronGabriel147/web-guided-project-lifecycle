@@ -23,7 +23,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
+    this.getDogs('husky');
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -31,17 +31,7 @@ class App extends React.Component {
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
       if (this.state.breed === 'chihuahua') {
-        axios.get('https://dog.ceo/api/breed/husky/images')
-          .then(res => {
-            this.setState({
-              ...this.state,
-              dogImages: res.data.message,
-              breed: 'husky'
-            })
-          })
-          .catch(err => {
-            console.log(err);
-          });
+        this.getDogs('husky');
       }
     }
   }
