@@ -10,7 +10,12 @@ class App extends React.Component {
     pokemon: data
   }
 
+  componentDidMount() {
+    console.log("App: Component Mounts");
+  }
+
   render() {
+    console.log("App: Renders DOM");
     return (
       <div className="App">
         <Pokemon pokemon={this.state.pokemon} />
