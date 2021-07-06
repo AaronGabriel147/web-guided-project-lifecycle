@@ -5,6 +5,7 @@ class Pokemon extends React.Component {
   componentDidMount() {
     console.log("Pokemon: Component Mounts");
   }
+
   render() {
     console.log("Pokemon: Renders DOM");
     return (
