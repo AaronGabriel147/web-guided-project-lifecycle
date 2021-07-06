@@ -8,7 +8,6 @@ class App extends React.Component {
     breed: ""
   }
 
-
   getDogs = (breed) => {
     axios.get(`https://dog.ceo/api/breed/${breed}/images`)
       .then(res => {
