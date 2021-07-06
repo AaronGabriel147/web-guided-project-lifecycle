@@ -22,11 +22,9 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("change of state");
     //if we have updated our dogimages from our state
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
-      console.log("change of dogimage");
       if (this.state.breed === 'chihuahua') {
         axios.get('https://dog.ceo/api/breed/husky/images')
           .then(res => {
