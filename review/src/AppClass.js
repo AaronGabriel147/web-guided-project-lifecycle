@@ -8,6 +8,7 @@ class AppClass extends React.Component {
   //     name: "Warren"
   //   };
   // }
+
   state = {
     name: "Warren"
   }
