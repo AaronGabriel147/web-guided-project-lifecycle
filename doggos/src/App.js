@@ -23,6 +23,10 @@ class App extends React.Component {
     })
   }
 
+  handleSubmit = (e) => {
+    console.log("here!!");
+  }
+
   //add in state for breed
   //setup onChange to put user input into breed
   //setup onSubmit to do axios call on breed to the api
@@ -31,7 +35,7 @@ class App extends React.Component {
   render() {
     return (<div>
       <h1>Dog Search Form v1.0</h1>
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input onChange={this.handleChange} />
         <button>Fetch Dogs</button>
       </form>
