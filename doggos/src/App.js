@@ -15,6 +15,9 @@ class App extends React.Component {
           ...this.state,
           dogImages: res.data.message
         })
+      })
+      .catch(err => {
+        console.log(err);
       });
   }
 
@@ -34,6 +37,9 @@ class App extends React.Component {
           dogImages: res.data.message
         });
       })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   //add in state for breed
