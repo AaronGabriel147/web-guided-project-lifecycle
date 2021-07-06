@@ -10,7 +10,7 @@ class App extends React.Component {
   componentDidMount() {
     axios.get('https://dog.ceo/api/breed/hound/images')
       .then(res => {
-        console.log(res);
+        console.log(res.data.message);
       });
   }
 
