@@ -8,9 +8,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://dog.ceo/api/breed/hound/images')
+    axios.get('https://dog.ceo/api/breed/husky/images')
       .then(res => {
-        console.log(res.data.message);
+        this.setState({
+          dogImages: res.data.message
+        })
       });
   }
 
