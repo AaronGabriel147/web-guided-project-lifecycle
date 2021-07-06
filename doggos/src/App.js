@@ -25,7 +25,7 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.breed)
+    axios.get()
   }
 
   //add in state for breed
