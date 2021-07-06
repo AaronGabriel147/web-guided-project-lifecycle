@@ -10,7 +10,11 @@ class AppClass extends React.Component {
   }
 
   componentDidMount() {
+    console.log("AppClass: Component Mounts");
+  }
 
+  componentDidUpdate() {
+    console.log("AppClass: Component Updates");
   }
 
   handleNameButtonClick = (e) => {
