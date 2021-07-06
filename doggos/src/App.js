@@ -31,7 +31,7 @@ class App extends React.Component {
     getDogs('husky')
       .then(res => {
         this.setState({
-          dogImages: res.data.message
+          dogImages: res
         });
       });
   }
@@ -44,7 +44,7 @@ class App extends React.Component {
         getDogs('husky')
           .then(res => {
             this.setState({
-              dogImages: res.data.message
+              dogImages: res
             });
           });
       }
@@ -63,7 +63,7 @@ class App extends React.Component {
     getDogs(this.state.breed)
       .then(res => {
         this.setState({
-          dogImages: res.data.message
+          dogImages: res
         });
       });
   }
