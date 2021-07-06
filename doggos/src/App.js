@@ -28,12 +28,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    getDogs('husky')
-      .then(res => {
-        this.setState({
-          dogImages: res
-        });
-      });
+    this.getDogs('husky');
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -41,12 +36,7 @@ class App extends React.Component {
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
       if (this.state.breed === 'chihuahua') {
-        getDogs('husky')
-          .then(res => {
-            this.setState({
-              dogImages: res
-            });
-          });
+        this.getDogs('husky');
       }
     }
   }
