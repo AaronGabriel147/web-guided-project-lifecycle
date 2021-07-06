@@ -30,6 +30,7 @@ class App extends React.Component {
     axios.get(`https://dog.ceo/api/breed/${this.state.breed}/images`)
       .then(res => {
         this.setState({
+          ...this.state,
           dogImages: res.data.message
         });
       })
