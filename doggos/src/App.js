@@ -24,7 +24,8 @@ class App extends React.Component {
   }
 
   handleSubmit = (e) => {
-    console.log("here!!");
+    e.preventDefault();
+    console.log(this.state.breed)
   }
 
   //add in state for breed
