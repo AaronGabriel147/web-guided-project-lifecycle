@@ -7,7 +7,7 @@ import Pokemon from './components/Pokemon';
 
 class App extends React.Component {
   state = {
-    pokemon: data
+    pokemon: []
   }
 
   componentDidMount() {
