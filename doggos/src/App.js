@@ -8,8 +8,9 @@ class App extends React.Component {
     breed: ""
   }
 
-  componentDidMount() {
-    axios.get('https://dog.ceo/api/breed/husky/images')
+
+  getDogs = (breed) => {
+    axios.get(`https://dog.ceo/api/breed/${breed}/images`)
       .then(res => {
         this.setState({
           ...this.state,
@@ -19,6 +20,10 @@ class App extends React.Component {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  componentDidMount() {
+
   }
 
   componentDidUpdate(prevProps, prevState) {
