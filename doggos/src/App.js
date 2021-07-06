@@ -17,14 +17,17 @@ class App extends React.Component {
 
   getDogs = (breed) => {
     axios.get(`https://dog.ceo/api/breed/${breed}/images`)
-      .then(res => {
-        this.setState({
-          dogImages: res.data.message
-        });
+      .then(res1 => {
+        axios.get(`https://dog.ceo/api/breed/${breed}/images`)
+          .then(res2 => {
+            this.setState({
+              dogImages: res.data.message
+            });
+          })
+          .catch(err => {
+            console.log(err);
+          });
       })
-      .catch(err => {
-        console.log(err);
-      });
   }
 
   componentDidMount() {
