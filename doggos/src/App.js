@@ -23,7 +23,7 @@ class App extends React.Component {
       </form>
       <div>
         {
-          dogImages.map((image) => {
+          this.state.dogImages.map((image) => {
             return (<img width="300" src={image} />)
           })
         }
