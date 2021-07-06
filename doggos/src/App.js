@@ -17,7 +17,7 @@ class App extends React.Component {
       });
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       breed: e.target.value
     })
@@ -29,7 +29,6 @@ class App extends React.Component {
   //set the state with our resultant response
 
   render() {
-    console.log(this.state.breed);
     return (<div>
       <h1>Dog Search Form v1.0</h1>
       <form>
