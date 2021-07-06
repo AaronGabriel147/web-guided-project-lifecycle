@@ -1,6 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 
+const getDogs = (breed) => {
+  return axios.get(`https://dog.ceo/api/breed/${breed}/images`)
+    .then(res => {
+      return (res.data.message);
+    })
+}
+
 class App extends React.Component {
 
   state = {
