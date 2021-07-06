@@ -22,11 +22,21 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log("called");
+    console.log("change of state");
     //if we have updated our dogimages from our state
     //if we also have searched for chihuahua
-    //do an axios call on husky
-
+    if (prevState.dogImages !== this.state.dogImages) {
+      axios.get('https://dog.ceo/api/breed/husky/images')
+        .then(res => {
+          this.setState({
+            ...this.state,
+            dogImages: res.data.message
+          })
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
   }
 
   handleChange = (e) => {
