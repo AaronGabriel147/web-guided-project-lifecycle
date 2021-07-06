@@ -27,6 +27,9 @@ class App extends React.Component {
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
       console.log("change of dogimage");
+      if (this.state.breed === 'chihuahua') {
+        console.log("searching for chihuahua")
+      }
       // axios.get('https://dog.ceo/api/breed/husky/images')
       //   .then(res => {
       //     this.setState({
