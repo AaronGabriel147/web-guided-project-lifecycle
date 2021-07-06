@@ -8,6 +8,7 @@ const AppFunc = () => {
     setName("Allison");
   };
 
+  console.log("AppFunc: Render DOM");
   return (
     <div>
       <h1>Hello {name}!</h1>
