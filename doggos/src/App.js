@@ -17,7 +17,12 @@ class App extends React.Component {
         <button>Fetch Dogs</button>
       </form>
       <div>
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
+        {
+          dogImages.map((image) => {
+            <img src={image} />
+          })
+        }
+
         <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
         <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
         <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
