@@ -5,7 +5,7 @@ const AppFunc = () => {
   const [name, setName] = useState("Warren");
 
   useEffect(() => {
-
+    console.log("AppFunc: Component Mounts");
   }, []);
 
   const handleClick = () => {
