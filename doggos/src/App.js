@@ -2,11 +2,16 @@ import React from 'react';
 import axios from 'axios';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      dogImages: []
-    }
+
+  state = {
+    dogImages: []
+  }
+
+  componentDidMount() {
+    axios.get('https://dog.ceo/api/breed/hound/images')
+      .then(res => {
+        console.log(res);
+      });
   }
 
   render() {
