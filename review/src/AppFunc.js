@@ -4,6 +4,10 @@ const AppFunc = () => {
   console.log("AppFunc: Setup State");
   const [name, setName] = useState("Warren");
 
+  useEffect(() => {
+
+  }, []);
+
   const handleClick = () => {
     console.log("AppFunc: Change State");
     setName("Allison");
