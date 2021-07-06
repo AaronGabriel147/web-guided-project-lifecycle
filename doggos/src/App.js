@@ -26,16 +26,17 @@ class App extends React.Component {
     //if we have updated our dogimages from our state
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
-      axios.get('https://dog.ceo/api/breed/husky/images')
-        .then(res => {
-          this.setState({
-            ...this.state,
-            dogImages: res.data.message
-          })
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      console.log("change of dogimage");
+      // axios.get('https://dog.ceo/api/breed/husky/images')
+      //   .then(res => {
+      //     this.setState({
+      //       ...this.state,
+      //       dogImages: res.data.message
+      //     })
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   });
     }
   }
 
