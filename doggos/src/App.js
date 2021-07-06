@@ -27,7 +27,9 @@ class App extends React.Component {
     e.preventDefault();
     axios.get(`https://dog.ceo/api/breed/${this.state.breed}/images`)
       .then(res => {
-        console.log(res.data.message);
+        this.setState({
+          dogImages: res.data.message
+        });
       })
   }
 
