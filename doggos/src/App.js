@@ -19,7 +19,6 @@ class App extends React.Component {
     axios.get(`https://dog.ceo/api/breed/${breed}/images`)
       .then(res => {
         this.setState({
-          ...this.state,
           dogImages: res.data.message
         });
       })
@@ -29,7 +28,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getDogs('husky');
+    this.getDogs('husky')
+      .then(res => {
+        this.setState({
+          dogImages: res.data.message
+        });
+      });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -37,7 +41,12 @@ class App extends React.Component {
     //if we also have searched for chihuahua
     if (prevState.dogImages !== this.state.dogImages) {
       if (this.state.breed === 'chihuahua') {
-        this.getDogs('husky');
+        this.getDogs('husky')
+          .then(res => {
+            this.setState({
+              dogImages: res.data.message
+            });
+          });
       }
     }
   }
@@ -51,8 +60,12 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.getDogs(this.state.breed);
-
+    this.getDogs(this.state.breed)
+      .then(res => {
+        this.setState({
+          dogImages: res.data.message
+        });
+      });
   }
 
   //add in state for breed
