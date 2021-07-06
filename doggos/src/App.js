@@ -32,7 +32,7 @@ class App extends React.Component {
           .then(res => {
             this.setState({
               ...this.state,
-              dogImages: []
+              dogImages: res.data.message
             })
           })
           .catch(err => {
