@@ -25,7 +25,10 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.get()
+    axios.get(`https://dog.ceo/api/breed/${this.state.breed}/images`)
+      .then(res => {
+        console.log(res);
+      })
   }
 
   //add in state for breed
