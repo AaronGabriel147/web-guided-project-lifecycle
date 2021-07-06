@@ -16,6 +16,11 @@ class App extends React.Component {
       });
   }
 
+  //add in state for breed
+  //setup onChange to put user input into breed
+  //setup onSubmit to do axios call on breed to the api
+  //set the state with our resultant response
+
   render() {
     return (<div>
       <h1>Dog Search Form v1.0</h1>
