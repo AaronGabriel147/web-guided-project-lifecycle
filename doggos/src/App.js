@@ -15,7 +15,7 @@ class App extends React.Component {
         this.setState({
           ...this.state,
           dogImages: res.data.message
-        })
+        });
       })
       .catch(err => {
         console.log(err);
@@ -45,16 +45,8 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.get(`https://dog.ceo/api/breed/${this.state.breed}/images`)
-      .then(res => {
-        this.setState({
-          ...this.state,
-          dogImages: res.data.message
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    this.getDogs(this.state.breed);
+
   }
 
   //add in state for breed
