@@ -17,6 +17,10 @@ class App extends React.Component {
       });
   }
 
+  handleChange(e) {
+
+  }
+
   //add in state for breed
   //setup onChange to put user input into breed
   //setup onSubmit to do axios call on breed to the api
@@ -26,7 +30,7 @@ class App extends React.Component {
     return (<div>
       <h1>Dog Search Form v1.0</h1>
       <form>
-        <input />
+        <input onChange={handleChange} />
         <button>Fetch Dogs</button>
       </form>
       <div>
