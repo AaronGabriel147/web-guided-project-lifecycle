@@ -20,9 +20,6 @@ class AppClass extends React.Component {
 
     console.log('old state: ', prevState);
     console.log('new state: ', this.state);
-    if (this.props !== prevProp) {
-      console.log("Was a prop change")
-    }
   }
 
   handleNameButtonClick = (e) => {
