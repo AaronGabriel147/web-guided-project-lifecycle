@@ -7,6 +7,10 @@ class App extends React.Component {
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_10263.jpg",
+      '"https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1007.jpg",
+      "https://images.dog.ceo/breeds/hound-afghan/n02088094_1023.jpg",
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_10263.jpg"
     ];
 
@@ -19,15 +23,9 @@ class App extends React.Component {
       <div>
         {
           dogImages.map((image) => {
-            <img src={image} />
+            return (<img width="300" src={image} />)
           })
         }
-
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
-        <img src="https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg" />
       </div>
     </div>);
   }
