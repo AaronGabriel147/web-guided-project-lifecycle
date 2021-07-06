@@ -7,7 +7,7 @@ import Pokemon from './components/Pokemon';
 
 class App extends React.Component {
   state = {
-    pokemon: []
+    pokemon: data
   }
 
   componentDidMount() {
@@ -18,7 +18,7 @@ class App extends React.Component {
     console.log("App: Renders DOM");
     return (
       <div className="App">
-        <Pokemon pokemon={this.state.pokemon} />
+        {this.state.pokemon.length === 0 ? <div>Loading</div> : <Pokemon pokemon={this.state.pokemon} />}
       </div>
     );
   }
