@@ -14,6 +14,13 @@ class AppClass extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    console.log('old props: ', prevProps);
+    console.log('new props: ', this.props);
+
+    console.log('old state: ', prevState);
+    console.log('new state: ', this.state);
+
+
     console.log("AppClass: Component Updates");
   }
 
