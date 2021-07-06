@@ -18,7 +18,9 @@ class App extends React.Component {
   }
 
   handleChange(e) {
-    console.log(e.target.value);
+    this.setState({
+      breed: e.target.value
+    })
   }
 
   //add in state for breed
