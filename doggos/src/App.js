@@ -21,6 +21,14 @@ class App extends React.Component {
       });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log("called");
+    //if we have updated our dogimages from our state
+    //if we also have searched for chihuahua
+    //do an axios call on husky
+
+  }
+
   handleChange = (e) => {
     this.setState({
       ...this.state,
