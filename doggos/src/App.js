@@ -12,6 +12,7 @@ class App extends React.Component {
     axios.get('https://dog.ceo/api/breed/husky/images')
       .then(res => {
         this.setState({
+          ...this.state,
           dogImages: res.data.message
         })
       });
@@ -19,6 +20,7 @@ class App extends React.Component {
 
   handleChange = (e) => {
     this.setState({
+      ...this.state,
       breed: e.target.value
     })
   }
