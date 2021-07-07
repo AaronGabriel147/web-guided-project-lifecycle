@@ -16,12 +16,25 @@ class App extends React.Component {
   }
 
   getDogs = (breed) => {
+
+    Promise.all([
+      axios.get(`https://dog.ceo/api/breed/husky/images`),
+      axios.get(`https://dog.ceo/api/breed/pug/images`)
+    ])
+      .then(resps => {
+        this.setState({
+          dogImages: resps[0].data.message,
+          dogImages2: resps[1].data.message
+        })
+      })
+
     axios.get(`https://dog.ceo/api/breed/${breed}/images`)
       .then(res1 => {
         axios.get(`https://dog.ceo/api/breed/${breed}/images`)
           .then(res2 => {
             this.setState({
-              dogImages: res.data.message
+              dogImages: res1.data.message,
+              dogImages2: res2.data.message
             });
           })
           .catch(err => {
